@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .title{
+            background: #229900;
+        }
+        .header{
+            background: #000;
+            float: left;
+            width: 200px;
+        }
+        .footer{
+            background: #550000;
+            height: 100px;
+        }
+        .clearfix:after{
+            content: ".";
+            display: block;
+            height: 0;
+            line-height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .clearfix{
+            zoom: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="title clearfix">
+    <div class="header">
+        haha
+    </div>
+
+    </div>
+    <div class="footer">
+        xixi
+    </div>
+</body>
+</html>
