@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            margin: 0 auto;
+            width: 500px;
+            height: 130px;
+            overflow: hidden;
+        }
+        ul,li{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        span{
+            display: none;
+            padding-top: 50px;
+            background: yellow;
+            height: 100px;
+            text-align: center;
+            font-size: 24px;
+        }
+        ul{
+            width: 500px;
+            height: 30px;
+            background: #ccc;
+
+        }
+        li{
+            float: left;
+            text-align: center;
+            height: 30px;
+            padding: 0 46px;
+        }
+        .corrent{
+            background: yellow;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>鞋子</li>
+        <li>衣服</li>
+        <li>裤子</li>
+        <li>帽子</li>
+    </ul>
+    <div>
+        <span class="show">鞋子</span>
+        <span>衣服</span>
+        <span>裤子</span>
+        <span>帽子</span>
+    </div>
+</div>
+<div class="box">
+    <ul>
+        <li>鞋子</li>
+        <li>衣服</li>
+        <li>裤子</li>
+        <li>帽子</li>
+    </ul>
+    <div>
+        <span class="show">鞋子</span>
+        <span>衣服</span>
+        <span>裤子</span>
+        <span>帽子</span>
+    </div>
+</div>
+
+
+<script>
+    var boxArr=document.getElementsByClassName("box")
+    fn(boxArr[0]);
+    fn(boxArr[1]);
+    function fn(ele) {
+        var liArr=ele.getElementsByTagName("li");
+        var spanArr=ele.getElementsByTagName("span");
+        for (var i=0;i<liArr.length;i++){
+            liArr[i].index=i;
+            liArr[i].onmouseover=function (){
+                for(var j=0;j<liArr.length;j++){
+                    liArr[j].className="";
+                    spanArr[j].className="";
+                }
+                this.className="corrent"
+                spanArr[this.index].className="show";
+            }
+
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>

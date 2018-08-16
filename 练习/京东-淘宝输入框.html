@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 200px;
+            height: 20px;
+            color: #ccc;
+            font-size: 12px;
+        }
+        label{
+            position: absolute;
+            left: 60px;
+            top: 60px;
+            color: #ccc;
+            font-size: 12px;
+            cursor: text;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+京东：<input type="text" value="我是京东" id="inp1"><br><br>
+淘宝：<label for="inp2">我是淘宝</label><input type="text" id="inp2">
+
+<script>
+    var inp1=document.getElementById("inp1");
+    inp1.onfocus=function (){
+        if(inp1.value==="我是京东")
+        inp1.value="";
+    }
+    inp1.onblur=function () {
+        if(inp1.value==="")
+            inp1.value="我是京东";
+    }
+    var inp2=document.getElementById("inp2");
+    var lab=document.getElementsByTagName("label")[0];
+    inp2.oninput=function (){
+        if(this.value===""){
+            lab.className="show";
+        }else{
+            lab.className="hide"
+        }
+    }
+</script>
+</body>
+</html>

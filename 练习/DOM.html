@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--关闭京东-->
+
+    <style>
+    .top-Banner{
+        background: pink;
+        height: 80px;
+    }
+        .w{
+            width:1250px;
+            /*background: #995599;*/
+            height: 80px;
+            margin: 10px auto;
+            position: relative;
+        }
+        img{
+            width:1250px;
+            background: #995599;
+            /*margin: 0 auto;*/
+        }
+        #closeBanner{
+            position:absolute;
+            top: 2px;
+            right: 5px;
+            text-decoration: none;
+            color: #000;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="topBanner" class="top-Banner">
+    <div class="w">
+        <img src="" alt="">
+        <a href="#" id="closeBanner">
+            x
+        </a>
+    </div>
+</div>
+<script>
+    var closeBanner=document.getElementById("closeBanner");
+    var topBanner=document.getElementById("topBanner");
+    closeBanner.onclick=function (){
+        topBanner.style.display="none";
+    }
+</script>
+</body>
+</html>

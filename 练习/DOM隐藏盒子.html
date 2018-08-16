@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            background: aqua;
+            width: 300px;
+            height: 300px;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">隐藏</button>
+<div>高山流水</div>
+
+<script>
+    var btn=document.getElementById("btn");
+    var div=document.getElementsByTagName("div")[0];
+    btn.onclick=function (){
+            if(this.innerHTML==="隐藏"){
+                div.className="hide";
+                this.innerHTML="显示";
+            }else{
+                div.className="show";
+                this.innerHTML="隐藏";
+            }
+    }
+</script>
+</body>
+</html>

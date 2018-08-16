@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="">
+<input type="text" value="">
+<input type="text" value="">
+<input type="text" value="">
+<input type="text" value="">
+<input type="text" value="">
+<button>赋值</button>
+<button>取值</button>
+</body>
+<script>
+    var inpArr=document.getElementsByTagName("input");
+    var btnArr=document.getElementsByTagName("button");
+    btnArr[0].onclick=function () {
+        for(var i=0;i<inpArr.length;i++){
+                inpArr[i].value=i;
+        }
+    }
+
+</script>
+</html>

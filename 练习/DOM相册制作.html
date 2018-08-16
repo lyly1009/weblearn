@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul li{
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<h2>相册</h2>
+<a href="#">注册</a>
+<ul id="imggallery" >
+    <li>
+        <a href="img/xia.jpg" title="图片1">
+            <img src="img/1.png" alt="图片1">
+        </a>
+    </li>
+    <li>
+        <a href="img/abcd.jpg" title="图片2">
+            <img src="img/2.png" alt="图片2">
+        </a>
+    </li>
+</ul>
+<div style="clear: both">
+<img src="" alt="" width="450px" height="200px" id="img"></div>
+<p id="des">选择一个图片</p>
+
+<script>
+    var ul=document.getElementById("imggallery");
+    var aArr=document.getElementsByTagName("a");
+    var img=document.getElementById("img");
+    var des=document.getElementById("des");
+    for(i=0;i<=aArr.length;i++){
+        aArr[i].onclick=function (){
+            img.src=this.href;
+            des.innerHTML=this.title;
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#" style="display:block;margin:10px" >切换</a>
+<img src="img/1.png" alt="图片" id="img" width="400" height="400">
+
+<script>
+    var img =document.getElementById("img");
+    var a =document.getElementsByTagName("a")[0];
+    a.onclick=function (){
+        img.src="img/2.png"
+        return false;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            background-image: url("img/1.png");
+            display: block;
+            height: 94px;
+            width: 88px;
+            position: absolute ;
+            right: 0;
+        }
+        .erweima{
+            position: absolute;
+            right: 100px;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function (){
+            var a=document.getElementsByTagName("a")[0];
+            var erweima=document.getElementsByClassName("erweima")[0];
+            a.onmouseover=function () {
+                erweima.className="erweima show";
+            }
+            a.onmouseout=function () {
+                erweima.className+="erweima hide";
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <a href="#"></a>
+    <div class="erweima">
+        <img src="img/abcd.jpg" alt="">
+    </div>
+
+</div>
+
+</body>
+</html>
