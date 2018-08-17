@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    input{
+        display:block;
+    }
+</style>
+<body>
+<ul>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <button>设置</button>
+</ul>
+
+<script>
+    var inpArr=document.getElementsByTagName("input");
+    var button=inpArr[inpArr.length-1].nextElementSibling||inpArr[inpArr.length-1].nextSibling;
+    console.log(button);
+    button.onclick=function () {
+        for(var i=0;i<inpArr.length;i++){
+            inpArr[i].onfocus=function () {
+                this.style.backgroundColor="pink";
+            }
+            inpArr[i].onblur=function () {
+                this.style.backgroundColor="";
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
