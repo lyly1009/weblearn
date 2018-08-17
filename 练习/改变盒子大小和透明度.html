@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box" style="width: 50px;height: 60px;background: #ccc"></div>
+</body>
+
+<script>
+    var box=document.getElementById("box");
+    box.onmouseover=function (ev) {
+        box.style.width="80px";
+        box.style.opacity="0.2";
+        box.style.filter="alpha(opacity=20%)"
+    }
+</script>
+</html>
