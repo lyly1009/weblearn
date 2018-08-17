@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .wrap{
+            width: 500px;
+            margin: 100px auto 0;
+        }
+        table{
+           border-collapse:collapse ;
+            border-spacing: 0;
+            border:1px solid red;
+            width: 500px;
+        }
+        tbody tr{
+            background: #c0c0c0;
+            cursor: pointer;
+        }
+        td{
+            border: 1px solid #c0c0c0;
+        }
+        th{
+            border: 1px solid #c0c0c0;
+            background: blue;
+        }
+        .current{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+        <th>姓名</th>
+        <th>课程</th>
+        <th>学号</th>
+        <th>成绩</th>
+        </tr>
+        </thead>
+        <tbody id="tb">
+        <tr>
+            <td>1</td>
+            <td>吕不韦</td>
+            <td>语文</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>吕布</td>
+            <td>日语</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>吕超</td>
+            <td>英语</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>吕蒙</td>
+            <td>俄语</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>吕志</td>
+            <td>数学</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>吕尚</td>
+            <td>地理</td>
+            <td>100</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var tBody=document.getElementById("tb");
+    var trArr=tBody.children;
+    console.log(trArr);
+    for(var i=0;i<trArr.length;i++){
+        if(i%2==0){
+            trArr[i].style.backgroundColor="#3c3c3c";
+        }else {
+            trArr[i].style.backgroundColor="#c0c0c0";
+        }
+        var color="";
+        trArr[i].onmouseover=function () {
+            color=this.style.backgroundColor;
+            this.style.backgroundColor="white"
+        }
+        trArr[i].onmouseout=function () {
+            this.style.backgroundColor=color;
+        }
+    }
+</script>
+
+</body>
+</html>
